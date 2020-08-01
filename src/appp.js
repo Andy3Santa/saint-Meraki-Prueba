@@ -76,7 +76,7 @@ app.get('',(req,res)=>{
 app.get('/about', function(req, res) {
 	
 	console.log('Validator = ' + validator);
-	res.status(200).send(validator);
+	res.status(200).send('Validator = ' +validator);
 });
 //
 // Getting the flow of data every 1 to 2 minutes
