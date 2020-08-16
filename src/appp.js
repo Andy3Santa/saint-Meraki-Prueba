@@ -80,7 +80,7 @@ app.get('/about', function(req, res) {
 
 	console.log('Secret verified');
 	cmxData(req.body);
-	res.status(201).send();
+	res.status(201).send('JSON Feed: ' + JSON.stringify(req.body, null, 2));
 
 });
 //
