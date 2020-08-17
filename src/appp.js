@@ -75,12 +75,10 @@ app.get('',(req,res)=>{
 // Meraki asks for us to know the secret
 app.get('/about', function(req, res) {
 	
-	// console.log('Validator = ' + validator);
-	// res.status(200).send('Validator = ' +validator);
+	 console.log('Validator = ' + validator);
+	 res.status(200).send('Validator = ' +validator);
 
-	console.log('Secret verified');
-	cmxData(req.query.body);
-	res.status(201).send('JSON Feed: ' + JSON.stringify(req.query.body, null, 2));
+	
 
 });
 //
