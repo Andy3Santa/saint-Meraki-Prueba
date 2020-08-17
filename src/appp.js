@@ -88,10 +88,7 @@ app.get('/about', function(req, res) {
 app.post('/about', function(req, res) {
 	if (req.body.secret == secret) {
 
-		res.render('about',{
-			title:'Posiciones Conectados',
-			name:'Andy'
-		})
+		
 
 		console.log('Secret verified');
 		cmxData(req.body);
