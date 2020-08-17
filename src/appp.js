@@ -94,7 +94,7 @@ app.post('/about', function(req, res) {
 		res.status(201).send(req.body);
 	} else {
 		console.log('Secret was invalid');
-		res.status(501).send(req.body.secret);
+		res.status(201).send(req.body);
 	}
 	
 });
