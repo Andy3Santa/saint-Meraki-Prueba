@@ -79,8 +79,8 @@ app.get('/about', function(req, res) {
 	// res.status(200).send('Validator = ' +validator);
 
 	console.log('Secret verified');
-	cmxData(req.body);
-	res.status(201).send('JSON Feed: ' + JSON.stringify(res.body, null, 2));
+	cmxData(req.query.body);
+	res.status(201).send('JSON Feed: ' + JSON.stringify(req.query.body, null, 2));
 
 });
 //
