@@ -5,10 +5,14 @@
 const path = require('path')
 const express= require('express')
 const hbs= require('hbs')
+const bodyParser = require("body-parser");
 
 const app= express()
 const port =process.env.PORT || 3000
 
+//Here we are configuring express to use body-parser as middle-ware.
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 //var port = process.env.OVERRIDE_PORT || process.env.PORT || 3000;
 //var secret = process.env.SECRET || 'Andres123';
@@ -84,7 +88,7 @@ app.get('/about', function(req, res) {
 });
 //
 // Getting the flow of data every 1 to 2 minutes
-app.post('/about', function(req, res) {
+app.post('/help', function(req, res) {
 	if (req.body.secret == secret) {
 
 		
@@ -94,7 +98,7 @@ app.post('/about', function(req, res) {
 		res.status(201).send(req.body);
 	} else {
 		console.log('Secret was invalid ');
-		res.status(201).send(secret);
+		res.status(201).send(req.body);
 	}
 	
 });
