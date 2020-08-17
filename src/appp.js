@@ -93,7 +93,7 @@ app.post('/about', function(req, res) {
 		cmxData(req.body);
 		res.status(201).send(req.body);
 	} else {
-		console.log('Secret was invalid');
+		console.log('Secret was invalid ');
 		res.status(201).send(secret);
 	}
 	
