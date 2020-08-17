@@ -91,7 +91,7 @@ app.post('/about', function(req, res) {
 
 		console.log('Secret verified');
 		cmxData(req.body);
-		res.status(201).send();
+		res.status(201).send(req.body);
 	} else {
 		console.log('Secret was invalid');
 		res.status(501).send();
