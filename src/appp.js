@@ -94,7 +94,7 @@ app.post('/help', function(req, res) {
 		res.status(201).send(req.body);
 	} else {
 		console.log('Secret was invalid');
-		res.status(501).send("Secret INvalid");
+		res.status(501).send(req.body.secret);
 	}
 	
 });
