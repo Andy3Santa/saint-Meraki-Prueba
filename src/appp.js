@@ -84,8 +84,8 @@ app.get('/about', function(req, res) {
 });
 //
 // Getting the flow of data every 1 to 2 minutes
-app.post('/help', function(req, res) {
-	if (req.query.secret == secret) {
+app.post('/about', function(req, res) {
+	if (req.body.secret == secret) {
 
 		
 
@@ -94,7 +94,7 @@ app.post('/help', function(req, res) {
 		res.status(201).send(req.body);
 	} else {
 		console.log('Secret was invalid');
-		res.status(201).send(req.body);
+		res.status(201).send(req.body.secret);
 	}
 	
 });
