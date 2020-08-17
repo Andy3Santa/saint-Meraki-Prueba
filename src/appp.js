@@ -77,7 +77,7 @@ app.get('',(req,res)=>{
 app.get('/about', function(req, res) {
 	
 	 console.log('Validator = ' + validator);
-	 res.status(200).send('Validator = ' +validator);
+	 res.status(200).send(validator);
 
 	
 
