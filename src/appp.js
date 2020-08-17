@@ -12,9 +12,9 @@ const port =process.env.PORT || 3000
 
 //var port = process.env.OVERRIDE_PORT || process.env.PORT || 3000;
 //var secret = process.env.SECRET || '333';
-var secret =  '333'
+var secret =  'Andres123';
 //var validator = process.env.VALIDATOR || '45a1cf7d6e72cc672a7712e40e8aff837288eef7';
-var validator = '45a1cf7d6e72cc672a7712e40e8aff837288eef7'
+var validator = '45a1cf7d6e72cc672a7712e40e8aff837288eef7';
 //var route = process.env.ROUTE || '/cmx';
 
 // All CMX JSON data will end up here. Send it to a database or whatever you fancy.
